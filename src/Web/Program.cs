@@ -52,6 +52,8 @@ builder.Services.AddRouting(options =>
     options.ConstraintMap["slugify"] = typeof(SlugifyParameterTransformer);
 });
 
+builder.Services.AddApplicationInsightsTelemetry();
+
 builder.Services.AddMvc(options =>
 {
     options.Conventions.Add(new RouteTokenTransformerConvention(
