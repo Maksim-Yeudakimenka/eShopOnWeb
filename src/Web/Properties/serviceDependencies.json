@@ -1,12 +1,16 @@
 {
   "dependencies": {
-    "mssql2": {
-      "type": "mssql",
-      "connectionId": "ConnectionStrings:CatalogConnection"
+    "appInsights1": {
+      "type": "appInsights",
+      "connectionId": "APPLICATIONINSIGHTS_CONNECTION_STRING"
     },
     "mssql1": {
       "type": "mssql",
       "connectionId": "ConnectionStrings:IdentityConnection"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:CatalogConnection"
     }
   }
 }
