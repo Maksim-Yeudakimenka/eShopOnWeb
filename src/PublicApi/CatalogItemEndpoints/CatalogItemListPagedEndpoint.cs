@@ -72,7 +72,12 @@ public class CatalogItemListPagedEndpoint : IEndpoint<IResult, ListPagedCatalogI
             response.PageCount = totalItems > 0 ? 1 : 0;
         }
 
+        _logger.LogCritical("ListPaged controller returned {CatalogItemsCount} items from the database.", response.CatalogItems.Count);
+        _logger.LogError("ListPaged controller returned {CatalogItemsCount} items from the database.", response.CatalogItems.Count);
+        _logger.LogWarning("ListPaged controller returned {CatalogItemsCount} items from the database.", response.CatalogItems.Count);
         _logger.LogInformation("ListPaged controller returned {CatalogItemsCount} items from the database.", response.CatalogItems.Count);
+        _logger.LogDebug("ListPaged controller returned {CatalogItemsCount} items from the database.", response.CatalogItems.Count);
+        _logger.LogTrace("ListPaged controller returned {CatalogItemsCount} items from the database.", response.CatalogItems.Count);
 
         return Results.Ok(response);
     }
